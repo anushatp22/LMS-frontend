@@ -1,0 +1,151 @@
+.homepage {
+    color: white;
+    background: linear-gradient(135deg, #237a57, #093028);
+    min-height: 100vh;
+    border: 2px solid rgba(0, 255, 200, 0.3);
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 3rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+  
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+  
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 1.5rem;
+        font-weight: 500;
+  
+        &:hover {
+          color: #ffd700;
+        }
+      }
+    }
+  
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5rem 2rem;
+      text-align: center;
+  
+      .hero-content {
+        max-width: 650px;
+  
+        h1 {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+  
+        p {
+          font-size: 1.1rem;
+          opacity: 0.85;
+          margin-bottom: 2rem;
+        }
+  
+        .cta-btn {
+          padding: 0.8rem 2rem;
+          border: none;
+          background: #ffd700;
+          color: #222;
+          font-size: 1rem;
+          border-radius: 25px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+  
+          &:hover {
+            background: #ffcc00;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem;
+      flex-wrap: wrap;
+  
+      .feature-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        text-align: center;
+        width: 250px;
+        transition: all 0.3s ease;
+  
+        &:hover {
+          transform: translateY(-8px);
+          background: rgba(255, 255, 255, 0.15);
+        }
+  
+        h2 {
+          margin-bottom: 0.5rem;
+        }
+  
+        p {
+          font-size: 0.95rem;
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+  .homepage-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #232526 , #093028 , #605c3c   );
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+  }
+  
+  .content button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .content button:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color:linear-gradient(53deg, #232526, #093028, #605c3c); /* dark tone to match your app */
+}

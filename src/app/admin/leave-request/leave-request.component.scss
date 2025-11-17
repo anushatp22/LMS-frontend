@@ -1,0 +1,229 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(53deg, #f5f6fa, #e8ecf1, #ffffff); /* light gradient */
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  color: #222;
+  font-family: Arial, sans-serif;
+  padding-bottom: 2rem;
+}
+
+.admin-dashboard-layout {
+  display: flex;
+}
+
+.dashboard-content {
+  flex: 1;
+  margin-left: 260px;
+  padding: 2rem;
+  transition: margin-left 0.3s ease;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+app-menu.collapsed + .dashboard-content {
+  margin-left: 60px;
+}
+
+/* Heading */
+.dashboard-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #1e293b;
+  }
+
+  .select-wrapper {
+    position: relative;
+    margin-top: 0.3rem;
+  }
+
+  select,
+  input[type="date"] {
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    color: #111827;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    appearance: none;
+    min-width: 140px;
+
+    &:focus {
+      border-color: #2563eb;
+      background: #ffffff;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+
+    &:hover {
+      border-color: #2563eb;
+      background: #f3f4f6;
+    }
+  }
+
+  .select-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #2563eb;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+  }
+
+  .select-wrapper:hover::after {
+    border-top-color: #1d4ed8;
+  }
+
+  option {
+    background-color: #ffffff;
+    color: #1e293b;
+    padding: 0.5rem;
+
+    &:hover,
+    &:checked {
+      background-color: #2563eb;
+      color: #ffffff;
+    }
+  }
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.leave-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+  color: #1e293b;
+
+  th,
+  td {
+    text-align: left;
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  thead {
+    background-color: #f3f4f6;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #f9fafb;
+    }
+
+    td.pending {
+      color: #f59e0b;
+      font-weight: 600;
+    }
+
+    td.approved {
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    td.rejected {
+      color: #ef4444;
+      font-weight: 600;
+    }
+
+    button {
+      padding: 0.35rem 0.8rem;
+      margin-right: 0.3rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: transform 0.2s ease, background 0.2s ease;
+      color: #fff;
+
+      &.approve-btn {
+        background-color: #10b981;
+      }
+
+      &.reject-btn {
+        background-color: #ef4444;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+/* Buttons */
+button {
+  margin-right: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .leave-table {
+    min-width: 100%;
+    font-size: 0.85rem;
+  }
+}

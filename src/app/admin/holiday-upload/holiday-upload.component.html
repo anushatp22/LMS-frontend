@@ -1,0 +1,28 @@
+ <div class="admin-holiday-layout">
+ <app-menu logoText="LeaveEase - Admin"></app-menu>
+<app-notification style="position: fixed; top: 10px; right: 20px; z-index: 1000;"></app-notification>
+<div class="dashboard-content">
+    <header>
+      <h2>Holiday Calendar Upload</h2>
+    </header>
+
+    <div class="upload-container">
+      <p class="description">
+        Upload the official holiday list for the organization. Only <strong>.csv</strong> or <strong>.xlsx</strong> files are accepted.
+      </p>
+
+      <div class="upload-box">
+        <input
+          type="file"
+          id="holidayFile"
+          accept=".csv, .xlsx"
+          (change)="onFileSelected($event)"
+          #fileInput
+        />
+        <button class="upload-btn" (click)="uploadFile()">Upload</button>
+      </div>
+<div class="actions">
+        <button class="template-btn" (click)="downloadTemplate()">Download Template</button>
+      </div>
+</div>
+</div>

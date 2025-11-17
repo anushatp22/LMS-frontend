@@ -1,0 +1,110 @@
+app-menu {
+  flex: 0 0 220px; // fixed width for menu
+  min-width: 220px;
+  max-width: 220px;
+  height: 100vh;
+  z-index: 2;
+  background: #ffffff; // light menu background
+  box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+}
+
+.leave-balance-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #e8ecf1; // light page background
+}
+
+.leave-balance-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; // prevents overflow
+}
+
+.leave-balance-container {
+  padding: 73px;
+  color: #222; // dark text
+  font-family: Arial, sans-serif;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #1e293b; // dark headline
+  }
+
+  .summary-bar {
+    display: flex;
+    justify-content: space-around;
+    background: #f3f4f6; // soft light background
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    div {
+      font-weight: bold;
+      color: #2563eb; // primary blue for summary
+    }
+  }
+
+  .leave-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .leave-card {
+    background: linear-gradient(135deg, #ffffff, #f3f4f6); // light card background
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); // subtle shadow
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: #1e293b; // dark card title
+    }
+
+    .leave-stats {
+      margin-bottom: 10px;
+
+      p {
+        margin: 4px 0;
+        color: #374151; // dark text for stats
+      }
+    }
+
+    .progress {
+      height: 8px;
+      background: #e5e7eb; // light gray track
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 15px;
+
+      .progress-bar {
+        height: 100%;
+        background: #2563eb; // primary blue progress
+        transition: width 0.4s ease;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #2563eb; // primary blue button
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #fff;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: #1d4ed8; // darker blue on hover
+      }
+    }
+  }
+}

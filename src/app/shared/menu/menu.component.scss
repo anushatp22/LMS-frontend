@@ -1,0 +1,79 @@
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb, #dbe2ea);
+  box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  color: #1e293b; /* dark text for light background */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Toggle button */
+.toggle-btn {
+  background: rgba(30, 41, 59, 0.1); /* semi-transparent dark for light theme */
+  border: none;
+  color: #2563eb; /* blue accent for visibility */
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  z-index: 101;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn:hover {
+  background: rgba(30, 41, 59, 0.15);
+  color: #1d4ed8; /* darker blue on hover */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-bottom: 1rem;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #1e293b; /* dark text */
+  font-weight: 500;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a .icon {
+  margin-right: 0.75rem;
+}
+
+nav a:hover,
+nav a.active {
+  background: rgba(37, 99, 235, 0.1); /* subtle blue hover */
+  color: #2563eb; /* primary blue for active */
+}

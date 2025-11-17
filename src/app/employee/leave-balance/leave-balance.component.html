@@ -1,0 +1,33 @@
+<div class="leave-balance-layout">
+<app-menu [role]="role"></app-menu>
+  <div class="leave-balance-main">
+<app-notification style="position: fixed; top: 10px; right: 20px; z-index: 1000;"></app-notification>
+<div class="leave-balance-container">
+  <h2>Leave Balance</h2>
+
+  <div class="summary-bar" *ngIf="leaveTypes.length > 0">
+    <!-- <div>Total Leaves: {{ leaveTypes.TotalTakenDays }}</div>
+    <div>Used: {{ totalUsed }}</div>
+    <div>Remaining: {{ totalRemaining }}</div> -->
+  </div>
+
+  <div class="leave-grid">
+    <div class="leave-card" *ngFor="let leave of leaveTypes">
+      <h3>{{ leave.leaveType }}</h3>
+
+      <div class="leave-stats">
+        <p>Used: {{ leave.totalTakenDays }}</p>
+        <p>Remaining: {{ leave.remainingDays }}</p>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar"
+             [style.width.%]="(leave.totalTakenDays / (leave.totalTakenDays + leave.remainingDays)) * 100"></div>
+      </div>
+
+      <button (click)="applyLeave(leave)">Apply Leave</button>
+    </div>
+  </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,35 @@
+<div class="holiday-view-layout">
+<app-menu [role]="role"></app-menu>
+<app-notification style="position: fixed; top: 10px; right: 20px; z-index: 1000;"></app-notification>
+
+  <div class="dashboard-content">
+    <div class="container">
+      <h2 class="page-title">Company Holidays</h2>
+
+      <!-- Holidays Table -->
+      <div class="table-wrapper">
+        <table class="holiday-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let h of holidays">
+              <td>{{ h.holidayDate | date:'dd-MM-yyyy' }}</td>
+              <td>{{ h.holidayName }}</td>
+              <td>{{ h.holidayType }}</td>
+              <td>{{ h.year }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <p *ngIf="holidays.length === 0" class="no-data-message">
+          No holidays available.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+.leave-balance-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #e8ecf1; // light page background
+}
+
+.leave-balance-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; // prevents overflow
+}
+.tab-navigation {
+  display: flex;
+  background: linear-gradient(135deg, #2c5282, #3b6ba8);
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin-left:272px;
+
+
+  .tab-item {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &.active {
+      color: #fff;
+      font-weight: 600;
+      border-bottom: 3px solid #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.tab-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+
+  h2 {
+    color: #2c5282;
+    margin-bottom: 20px;
+  }
+}

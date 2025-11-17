@@ -1,0 +1,101 @@
+.leave-balance-layout {
+  display: flex;
+  min-height: 100vh;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.apply-card {
+  margin: auto;
+  margin-top: -5%;
+  background: linear-gradient(135deg, #ffffff, #f3f4f6); /* light card background */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  padding: 35px 40px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.apply-card h2 {
+  color: #1e293b; /* dark headline */
+  margin-bottom: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.apply-card p {
+  margin-bottom: 24px;
+  color: #374151; /* slightly lighter dark text */
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.form-row label {
+  min-width: 120px;
+  margin-right: 16px;
+  color: #374151; /* dark text for labels */
+  font-weight: 500;
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db; /* subtle border */
+  font-size: 1rem;
+  background: #f9fafb; /* light background */
+  color: #111827;
+  transition: all 0.3s ease;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus {
+  outline: none;
+  border-color: #2563eb; /* primary blue focus */
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+.form-row button {
+  margin-top: 10px;
+  padding: 12px 0;
+  background: #2563eb; /* primary blue button */
+  color: #fff;
+  border: none;
+  border-radius: 26px;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-row button:hover:not(:disabled) {
+  background: #1d4ed8; /* darker blue hover */
+  transform: scale(1.05);
+}
+
+.form-row button:disabled {
+  background: rgba(37, 99, 235, 0.5); /* lighter disabled */
+  color: #fff;
+  cursor: not-allowed;
+}

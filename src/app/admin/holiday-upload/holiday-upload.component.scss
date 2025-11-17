@@ -1,0 +1,135 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #f9fafb;
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  color: #222;
+  font-family: Arial, sans-serif;
+  padding-bottom: 2rem;
+}
+
+.admin-holiday-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  flex: 1;
+  margin-left: 260px;
+  padding: 2rem;
+  transition: margin-left 0.3s ease;
+  background: transparent;
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+header h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.upload-container {
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.description {
+  color: #374151;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="file"] {
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #f9fafb;
+  cursor: pointer;
+  width: 80%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #2563eb;
+}
+
+/* --- Unified Button Style --- */
+.upload-btn,
+.template-btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+}
+
+.upload-btn:hover,
+.template-btn:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* --- Distinguish Download Template slightly --- */
+.template-btn {
+  background: #ffffff;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.template-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* --- Actions Container --- */
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

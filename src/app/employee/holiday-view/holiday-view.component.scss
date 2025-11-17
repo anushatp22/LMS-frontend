@@ -1,0 +1,133 @@
+.holiday-view-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f4f6 !important;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 250px; // Adjust based on your menu width
+  
+  @media (max-width: 768px) {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  background-color: #ffffff !important;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.holiday-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  color: #1e293b;
+
+  th, td {
+    text-align: left;
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  thead {
+    background-color: #f3f4f6;
+    
+    th {
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #f9fafb;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  td {
+    color: #334155;
+  }
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 2rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* Buttons for future actions */
+button {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+
+  &:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .leave-table {
+    min-width: 100%;
+    font-size: 0.85rem;
+
+    th, td {
+      padding: 0.6rem 0.8rem;
+    }
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablet responsive */
+@media (max-width: 1024px) {
+  .dashboard-content {
+    margin-left: 200px;
+  }
+}

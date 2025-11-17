@@ -1,0 +1,125 @@
+.admin-dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f6fa, #e8ecf1, #ffffff);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  color: #212121;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+header nav a {
+  color: #1e293b;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+header nav a:hover {
+  color: #2563eb;
+}
+
+/* Hero Section */
+.dashboard-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.dashboard-hero .hero-content {
+  max-width: 650px;
+}
+.dashboard-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+.dashboard-hero p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  color: #374151;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+.feature-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-8px);
+  background: #f9fafb;
+}
+.feature-card h2 {
+  margin-bottom: 0.5rem;
+  color: #2563eb;
+}
+.feature-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  color: #374151;
+}
+
+.admin-dashboard-layout {
+  display: flex;
+}
+.dashboard-content {
+  margin-left: 240px;  /* default */
+  padding: 2rem;
+  flex: 1;
+  transition: margin-left 0.3s ease;
+}
+
+/* Optional: fix header on top of dashboard content */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 5;   /* lower than sidebar if needed */
+}
+
+/* When sidebar collapsed, shift content */
+app-menu.collapsed + .dashboard-content {
+  margin-left: 60px;
+}

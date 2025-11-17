@@ -1,0 +1,85 @@
+/* Full screen background to match home */
+:host {
+  display: block;
+  height: 100vh;
+  background: linear-gradient(53deg, #f5f6fa, #e8ecf1, #ffffff);
+  color: #222;
+  font-family: Arial, sans-serif;
+  animation: gradientShift 10s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Center the login form */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform: translateY(20%);
+}
+
+/* Headline */
+.login-container h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #1e293b;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #374151;
+}
+
+input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #d1d5db; /* subtle border */
+  border-radius: 6px;
+  background: #f9fafb; /* light gray background */
+  color: #111827;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #ffffff; /* lighter when focused */
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.4); /* blue glow */
+}
+
+/* Button styling */
+.login-btn {
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 26px; /* Rounded corners to match the theme */
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff; /* White text for contrast */
+  background: #2563eb; /* Blue primary button */
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #1d4ed8; /* Darker blue for hover effect */
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}

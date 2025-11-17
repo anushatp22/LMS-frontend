@@ -1,0 +1,176 @@
+.dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 300px;
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(37, 99, 235, 0.2);
+  padding: 9px;
+  color: #1e293b;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(37, 99, 235, 0.3);
+    border-radius: 10px;
+
+    &:hover {
+      background: rgba(37, 99, 235, 0.5);
+    }
+  }
+
+  div {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    word-wrap: break-word;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: rgba(37, 99, 235, 0.05);
+    }
+
+    &.unread {
+      background: rgba(37, 99, 235, 0.1);
+      font-weight: bold;
+      border-left: 3px solid #2563eb;
+      margin-left: -6px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+    }
+
+    span {
+      display: block;
+      color: #1e293b;
+      line-height: 1.4;
+      
+      // Limit to 3 lines with ellipsis
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+
+
+    button {
+      float: right;
+      border: none;
+      background: #2563eb; /* primary blue */
+      color: #fff;
+      border-radius: 6px;
+      padding: 2px 6px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #1d4ed8; /* darker blue on hover */
+      }
+    }
+  }
+}
+
+.dropdown div.unread {
+  font-weight: bold;
+  background: rgba(37, 99, 235, 0.15); /* subtle blue highlight */
+  border-left: 3px solid #2563eb;    
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  margin-left: -6px;
+}
+
+.notification-bell {
+  position: fixed;
+  top: 15px;
+  right: 63px;
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  outline: none; 
+  color: #2563eb; /* blue bell for light theme */
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(37, 99, 235, 0.1); /* subtle hover */
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    outline:none;
+    background: transparent;
+  }
+
+  span {
+    margin-left: 5px;
+    font-size: 0.85rem;
+    background: #dc3545;   /* keep red for unread count */
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+}
+
+.top-right-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.profile-dropdown {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #2563eb;
+
+  &:hover {
+    color: #1d4ed8;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    overflow: hidden;
+    min-width: 120px;
+
+    .dropdown-item {
+      padding: 10px;
+      font-size: 0.9rem;
+      color: #1e293b;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #f3f4f6;
+      }
+    }
+  }
+}

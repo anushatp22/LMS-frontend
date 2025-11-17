@@ -1,0 +1,46 @@
+<div class="leave-balance-layout">
+<app-menu [role]="role"></app-menu>
+  <div class="leave-balance-main">
+<app-notification style="position: fixed; top: 10px; right: 20px; z-index: 1000;"></app-notification>
+
+   <!-- Tab Navigation -->
+    <div class="tab-navigation">
+      <button 
+        class="tab-item" 
+        [class.active]="activeTab === 'myData'"
+        (click)="activeTab = 'myData'">
+        My Data
+      </button>
+      <button 
+        class="tab-item" 
+        [class.active]="activeTab === 'team'"
+        (click)="activeTab = 'team'">
+        Team
+      </button>
+      <button 
+        class="tab-item" 
+        [class.active]="activeTab === 'holidays'"
+        (click)="activeTab = 'holidays'">
+        Holidays
+      </button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+      <div *ngIf="activeTab === 'myData'">
+        <!-- Your My Data content here -->
+        <h2>My Data</h2>
+      </div>
+      
+      <div *ngIf="activeTab === 'team'">
+        <!-- Your Team content here -->
+        <h2>Team</h2>
+      </div>
+      
+      <div *ngIf="activeTab === 'holidays'">
+        <!-- Your Holidays content here -->
+        <h2>Holidays</h2>
+      </div>
+    </div>
+</div>
+</div>

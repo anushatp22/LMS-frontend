@@ -1,0 +1,46 @@
+<div class="admin-dashboard-container">
+  <div class="admin-dashboard-layout">
+    <!-- Sidebar -->
+    <app-menu logoText=" Admin"></app-menu>
+<app-notification style="position: fixed; top: 10px; right: 20px; z-index: 1000;"></app-notification>
+
+    <!-- Main content -->
+    <div class="dashboard-content">
+      <!-- Header -->
+      <header>
+        <div class="logo">LeaveEase - Admin</div>
+        <nav>
+          <a routerLink="/admin/overview" routerLinkActive="active">Overview</a>
+          <a routerLink="/admin/users" routerLinkActive="active">Manage Users</a>
+          <a routerLink="/admin/leaves" routerLinkActive="active">Leave Requests</a>
+          <a routerLink="/admin/reports" routerLinkActive="active">Reports</a>
+          <a routerLink="/admin/employeeRegistration" routerLinkActive="active">Employee Registration</a>
+        </nav>
+      </header>
+
+      <!-- Main Dashboard Content -->
+      <section class="dashboard-hero">
+        <div class="hero-content">
+          <h1>Welcome to Admin Dashboard</h1>
+          <p>Manage your organizations leave requests efficiently.</p>
+        </div>
+      </section>
+
+      <!-- Dashboard Features -->
+      <section class="features">
+        <div class="feature-card">
+          <h2>📅 View All Requests</h2>
+          <p>Track and review pending, approved, and rejected leaves in real-time.</p>
+        </div>
+        <div class="feature-card">
+          <h2>👥 Manage Users</h2>
+          <p>Create, edit, and deactivate employee accounts easily.</p>
+        </div>
+        <div class="feature-card">
+          <h2>📊 Analytics</h2>
+          <p>Visualize leave patterns and identify staffing gaps instantly.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
